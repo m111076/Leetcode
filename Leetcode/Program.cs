@@ -51,6 +51,7 @@ internal class Program
         //_2342_Max_Sum_of_a_Pair_With_Equal_Sum_of_Digits.MaximumSum(new int[] { 18, 43, 36, 13, 7 });
         //_3066_Minimum_Operations_to_Exceed_Threshold_Value_II.MinOperations(new int[] { 999999999, 999999999, 999999999 }, 1000000000);
         //_2698_Find_the_Punishment_Number_of_an_Integer.PunishmentNumber(169);
-        _2375_Construct_Smallest_Number_From_DI_String.SmallestNumber("IIIDIDDD");
+        //_2375_Construct_Smallest_Number_From_DI_String.SmallestNumber("IIIDIDDD");
+        var t = _0125_Valid_Palindrome.IsPalindrome("A man, a plan, a canal: Panama");
     }
 }
