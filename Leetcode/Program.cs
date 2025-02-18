@@ -1,0 +1,55 @@
+﻿using Leetcode.Easy;
+using Leetcode.Medium;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        //double result = 1.0;
+        //var x = 3529.0;
+        //var y = 3565.0;
+        //for (var i = 0; i < 36; i++)
+        //{
+        //    result *= (x + i) / (y + i);
+        //}
+        //Console.WriteLine($@"{result}");
+
+        //double result1 = 1.0;
+        //var x1 = 3385.0;
+        //var y1 = 3493.0;
+        //for (var i = 0; i < 108; i++)
+        //{
+        //    result1 *= (x1 + i) / (y1 + i);
+        //}
+        //Console.WriteLine($@"{result1}");
+
+        //double result2 = 1.0;
+        //var x2 = 3241.0;
+        //var y2 = 3421.0;
+        //for (var i = 0; i < 180; i++)
+        //{
+        //    result2 *= (x2 + i) / (y2 + i);
+        //}
+        //Console.WriteLine($@"{result2}");
+
+        //var test = new _14_Longest_Common_Prefix();
+        //var strs = new string[] { "qwe1321321", "qwe7894561", "qwe789456465" };
+        //var str = _14_Longest_Common_Prefix.LongestCommonPrefix(strs);
+
+
+        //_27_Remove_Element.RemoveElement(new int[] { 3, 2, 2, 3 }, 3);
+
+        //_28_Find_the_Index_of_the_First_Occurrence_in_a_String.StrStr("sadbutsad", "sad");
+        //_58_Length_of_Last_Word.LengthOfLastWord("luffy is still joyboy");
+        //_66_Plus_One.PlusOne(new int[] { 1,2,3 });
+        //_67_Add_Binary.AddBinary("11", "1");
+        //_67_Add_Binary.AddBinary("1010", "1011");
+        //_69_Sqrt_x_.MySqrt(2147395599);
+        //_2364_Count_Number_of_Bad_Pairs.CountBadPairs(new int[] { 4, 1, 3, 3 });
+        //_3174_Clear_Digits.ClearDigits("cb34");
+        //_1910_Remove_All_Occurrences_of_a_Substring.RemoveOccurrences("daabcbaabcbc","abc");
+        //_2342_Max_Sum_of_a_Pair_With_Equal_Sum_of_Digits.MaximumSum(new int[] { 18, 43, 36, 13, 7 });
+        //_3066_Minimum_Operations_to_Exceed_Threshold_Value_II.MinOperations(new int[] { 999999999, 999999999, 999999999 }, 1000000000);
+        _2698_Find_the_Punishment_Number_of_an_Integer.PunishmentNumber(169);
+    }
+}
