@@ -52,6 +52,7 @@ internal class Program
         //_3066_Minimum_Operations_to_Exceed_Threshold_Value_II.MinOperations(new int[] { 999999999, 999999999, 999999999 }, 1000000000);
         //_2698_Find_the_Punishment_Number_of_an_Integer.PunishmentNumber(169);
         //_2375_Construct_Smallest_Number_From_DI_String.SmallestNumber("IIIDIDDD");
-        var t = _0125_Valid_Palindrome.IsPalindrome("A man, a plan, a canal: Panama");
+        //var t = _0125_Valid_Palindrome.IsPalindrome("A man, a plan, a canal: Panama");
+        _1415_The_k_th_Lexicographical_String_of_All_Happy_Strings_of_Length_n.GetHappyString(3, 9);
     }
 }
