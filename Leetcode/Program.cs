@@ -1,4 +1,5 @@
 ﻿using Leetcode.Easy;
+using Leetcode.Hard;
 using Leetcode.Medium;
 
 internal class Program
@@ -54,5 +55,8 @@ internal class Program
         //_2375_Construct_Smallest_Number_From_DI_String.SmallestNumber("IIIDIDDD");
         //var t = _0125_Valid_Palindrome.IsPalindrome("A man, a plan, a canal: Panama");
         //_1415_The_k_th_Lexicographical_String_of_All_Happy_Strings_of_Length_n.GetHappyString(3, 9);
+        //_1028_Recover_a_Tree_From_Preorder_Traversal.RecoverFromPreorder("1-2--3--4-5--6--7");
+        //_3151_Special_Array_I.IsArraySpecial(new int[] { 2, 1, 4 });
+        _1752_Check_if_Array_Is_Sorted_and_Rotated.Check(new int[] { 3, 4, 5, 1, 2 });
     }
 }
