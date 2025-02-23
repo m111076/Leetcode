@@ -57,6 +57,9 @@ internal class Program
         //_1415_The_k_th_Lexicographical_String_of_All_Happy_Strings_of_Length_n.GetHappyString(3, 9);
         //_1028_Recover_a_Tree_From_Preorder_Traversal.RecoverFromPreorder("1-2--3--4-5--6--7");
         //_3151_Special_Array_I.IsArraySpecial(new int[] { 2, 1, 4 });
-        _1752_Check_if_Array_Is_Sorted_and_Rotated.Check(new int[] { 3, 4, 5, 1, 2 });
+        //_1752_Check_if_Array_Is_Sorted_and_Rotated.Check(new int[] { 3, 4, 5, 1, 2 });
+        //_3105_Longest_Strictly_Increasing_or_Strictly_Decreasing_Subarray.LongestMonotonicSubarray(new int[] { 1, 9, 7, 1 });
+        _1790_Check_if_One_String_Swap_Can_Make_Strings_Equal.AreAlmostEqual("bank", "kanb");
+
     }
 }
