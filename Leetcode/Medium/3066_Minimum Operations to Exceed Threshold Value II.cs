@@ -12,6 +12,7 @@ namespace Leetcode.Medium
         {
             //int result = 0;
             //List<long> newNums = new List<long>();
+            ////升序排法
             //Array.Sort(nums, (a, b) => b.CompareTo(a));
             //int i = nums.Length - 1;
             //int j = 0;
@@ -32,33 +33,30 @@ namespace Leetcode.Medium
             //    result++;
             //}
 
-            var priorityQueue = new PriorityQueue<int, int>();
+            //runtime 65%
+            //全部加進去PQ給他排序  Peek查看最小值是否超過K 沒超過則運算
+            var priorityQueue = new PriorityQueue<long, long>();
 
             foreach (var num in nums)
             {
-                if (num < k)
-                {
-                    priorityQueue.Enqueue(num, num);
-                }
+                priorityQueue.Enqueue(num, num);
             }
 
             var res = 0;
-            while (priorityQueue.Count > 1)
+
+            while (priorityQueue.Peek() < k)
             {
                 var x = priorityQueue.Dequeue();
                 var y = priorityQueue.Dequeue();
 
-                var newNum = x * 2 + y;
-                if (x * 2 < k - y)
-                {
-                    priorityQueue.Enqueue(x * 2 + y, x * 2 + y);
-                }
+                priorityQueue.Enqueue(x * 2 + y, x * 2 + y);
 
                 res++;
             }
 
-            return res + priorityQueue.Count;
+            return res;
 
+            //超時
             //var tempDic = new Dictionary<long, long>();
             //var time = 0;
             //foreach (var num in nums)

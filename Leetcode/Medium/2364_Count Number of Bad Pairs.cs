@@ -10,13 +10,23 @@ namespace Leetcode.Medium
     {
         public static long CountBadPairs(int[] nums)
         {
+            //runtime 99% memory 62%
+            //i-nums[i]=j-nums[j]
+            //total-好的
             long count = 0;
             Dictionary<int, int> freq = new(nums.Length);
             for (int i = 0; i < nums.Length; i++)
             {
-                int n = i - nums[i];
-                int matches = freq[n] = freq.GetValueOrDefault(n) + 1;
-                count += i - matches + 1;
+                var target = i - nums[i];
+                var matchAMount = freq.GetValueOrDefault(target);
+                freq[target] = matchAMount + 1;
+                count += i - matchAMount;
+
+                //這個稍快一點 但較不好懂
+                //var target = i - nums[i];
+                //var matches = freq.GetValueOrDefault(target) + 1;
+                //freq[target] = matches;
+                //count += i - matches + 1;
             }
             return count;
 

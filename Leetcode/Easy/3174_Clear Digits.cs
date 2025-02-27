@@ -10,6 +10,8 @@ namespace Leetcode.Easy
     {
         public static string ClearDigits(string s)
         {
+            //runtime 62%
+            //題目說起使不為digital所以可以只留else內的就好
             var isFinish = false;
             while (!isFinish)
             {
