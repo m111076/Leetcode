@@ -1,4 +1,5 @@
-﻿using Leetcode.Easy;
+﻿using Leetcode.BC;
+using Leetcode.Easy;
 using Leetcode.Hard;
 using Leetcode.Medium;
 
@@ -59,7 +60,11 @@ internal class Program
         //_3151_Special_Array_I.IsArraySpecial(new int[] { 2, 1, 4 });
         //_1752_Check_if_Array_Is_Sorted_and_Rotated.Check(new int[] { 3, 4, 5, 1, 2 });
         //_3105_Longest_Strictly_Increasing_or_Strictly_Decreasing_Subarray.LongestMonotonicSubarray(new int[] { 1, 9, 7, 1 });
-        _1790_Check_if_One_String_Swap_Can_Make_Strings_Equal.AreAlmostEqual("bank", "kanb");
+        //_1790_Check_if_One_String_Swap_Can_Make_Strings_Equal.AreAlmostEqual("bank", "kanb");
+        //_1092_Shortest_Common_Supersequence.ShortestCommonSupersequence("abac", "cab");
+        //_2800_Shortest_String_That_Contains_Three_Strings.MinimumString("abc", "bca","aaa");
+        //_0242_Valid_Anagram.IsAnagram("anagram", "nagaram");
+        var t=  _250301_Q4_Permutations_IV.Permute(2, 3);
 
     }
 }
