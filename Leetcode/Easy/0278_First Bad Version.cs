@@ -8,24 +8,33 @@ namespace Leetcode.Easy
 {
     public class _0278_First_Bad_Version
     {
-        //public int FirstBadVersion(int n)
-        //{
-        //    if (n == 1) return 1;
+        public int TargetIdx = 0;
 
-        //    var target = n / 2;
-        //    if (IsBadVersion(target))
-        //        return target;
-        //    else
-        //    {
-        //        FirstBadVersion((n + target) / 2);
-        //        FirstBadVersion((1 + target) / 2);
-        //    }
+        public int FirstBadVersion(int n)
+        {
+            //runtime 99%
+            //二分搜尋
+            var low = 1;
+            var high = n;
 
-        //}
+            while (low < high)
+            {
+                int mid = low + (high - low) / 2;
+                if (IsBadVersion(mid))
+                {
+                    high = mid;
+                }
+                else
+                {
+                    low = mid + 1;
+                }
+            }
+            return high;
+        }
 
-        //public bool IsBadVersion(int version)
-        //{
-        //    return true;
-        //}
+        public bool IsBadVersion(int version)
+        {
+            return true;
+        }
     }
 }

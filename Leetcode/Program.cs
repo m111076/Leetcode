@@ -2,6 +2,7 @@
 using Leetcode.Easy;
 using Leetcode.Hard;
 using Leetcode.Medium;
+using Leetcode.WC._439;
 
 internal class Program
 {
@@ -64,7 +65,8 @@ internal class Program
         //_1092_Shortest_Common_Supersequence.ShortestCommonSupersequence("abac", "cab");
         //_2800_Shortest_String_That_Contains_Three_Strings.MinimumString("abc", "bca","aaa");
         //_0242_Valid_Anagram.IsAnagram("anagram", "nagaram");
-        var t=  _250301_Q4_Permutations_IV.Permute(2, 3);
+        var t = _250301_Q4_Permutations_IV.Permute(5, 2);
+        //Q2_Longest_Palindromic_Subsequence_After_at_Most_K_Operations.LongestPalindromicSubsequence("abced", 2);
 
     }
 }
