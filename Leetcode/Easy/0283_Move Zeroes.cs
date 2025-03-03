@@ -10,7 +10,7 @@ namespace Leetcode.Easy
     {
         public void MoveZeroes(int[] nums)
         {
-
+            //runtime 96.75%
             var length = nums.Length;
             var idx = 0;
 
