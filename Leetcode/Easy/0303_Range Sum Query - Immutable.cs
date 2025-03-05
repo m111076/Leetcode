@@ -10,6 +10,7 @@ namespace Leetcode.Easy
     {
         public class NumArray
         {
+            //runtime 100%
             public int[] ints;
             public NumArray(int[] nums)
             {
@@ -24,7 +25,7 @@ namespace Leetcode.Easy
 
             public int SumRange(int left, int right)
             {
-                return ints[right+1] - ints[left+1];
+                return ints[right + 1] - ints[left];
             }
         }
     }
