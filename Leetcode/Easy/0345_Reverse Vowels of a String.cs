@@ -10,6 +10,7 @@ namespace Leetcode.Easy
     {
         public string ReverseVowels(string s)
         {
+            //runtime 60%
             var vowelsStack = new Stack<char>();
             var result = new StringBuilder();
             for (var i = 0; i < s.Length; i++)
@@ -18,7 +19,7 @@ namespace Leetcode.Easy
                     vowelsStack.Push(s[i]);
             }
 
-            for (var i = s.Length - 1; i > 0; i--)
+            for (var i = 0; i < s.Length; i++)
             {
                 if ("aeiouAEIOU".Contains(s[i]))
                     result.Append(vowelsStack.Pop());

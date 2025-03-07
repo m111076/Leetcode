@@ -11,6 +11,8 @@ namespace Leetcode.Easy
         public int[] Intersection(int[] nums1, int[] nums2)
         {
             //runtime97.54%
+            //num1中的數字加入dic中，不計數
+            //接著用num2來確認是否有重複
             var tmpDic = new Dictionary<int, int>();
             var result = new List<int>();
             foreach (var num in nums1)
