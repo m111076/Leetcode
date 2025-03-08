@@ -10,6 +10,7 @@ namespace Leetcode.Easy
     {
         public int FirstUniqChar(string s)
         {
+            //runtime 53%
             var cDic = new Dictionary<char, int>();
 
             foreach (var c in s)

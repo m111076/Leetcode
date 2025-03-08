@@ -67,7 +67,8 @@ internal class Program
         //Q2_Longest_Palindromic_Subsequence_After_at_Most_K_Operations.LongestPalindromicSubsequence("abced", 2);
         //_0326_Power_of_Three.IsPowerOfThree(27);
         //_0344_Reverse_String.ReverseString(new char[] { 'h', 'e', 'l', 'l', 'o', });
-        _2523_Closest_Prime_Numbers_in_Range.ClosestPrimes(19, 31);
+        //_2523_Closest_Prime_Numbers_in_Range.ClosestPrimes(19, 31);
+        _2379_Minimum_Recolors_to_Get_K_Consecutive_Black_Blocks.MinimumRecolors("WBBWWBBWBW", 7);
 
     }
 }

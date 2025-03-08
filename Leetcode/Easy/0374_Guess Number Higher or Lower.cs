@@ -11,7 +11,7 @@ namespace Leetcode.Easy
         public int GuessNumber(int n)
         {
             //runtime 10%
-            //min + (max - min) / 2 速度比 ( min + max )/2 快
+            //min + (max - min) / 2 替代 ( min + max )/2 可以避免溢位產生錯誤
             var min = 1;
             var max = n;
             var mid = n / 2;
