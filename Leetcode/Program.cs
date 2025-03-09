@@ -68,7 +68,11 @@ internal class Program
         //_0326_Power_of_Three.IsPowerOfThree(27);
         //_0344_Reverse_String.ReverseString(new char[] { 'h', 'e', 'l', 'l', 'o', });
         //_2523_Closest_Prime_Numbers_in_Range.ClosestPrimes(19, 31);
-        _2379_Minimum_Recolors_to_Get_K_Consecutive_Black_Blocks.MinimumRecolors("WBBWWBBWBW", 7);
+        //_2379_Minimum_Recolors_to_Get_K_Consecutive_Black_Blocks.MinimumRecolors("WBBWWBBWBW", 7);
+        //_0405_Convert_a_Number_to_Hexadecimal.ToHex(-1);
+        //_0414_Third_Maximum_Number.ThirdMax(new int[] { 2, 2, 3, 1 });
+        //_0434_Number_of_Segments_in_a_String.CountSegments("                ");
+        _0459_Repeated_Substring_Pattern.RepeatedSubstringPattern("");
 
     }
 }

@@ -10,6 +10,8 @@ namespace Leetcode.Easy
     {
         public char FindTheDifference(string s, string t)
         {
+            //runtime 100%
+            //也可以用Dictionary做看看
             var result = 0;
 
             for (var i = 0; i < t.Length; i++)
