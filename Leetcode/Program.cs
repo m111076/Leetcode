@@ -72,7 +72,10 @@ internal class Program
         //_0405_Convert_a_Number_to_Hexadecimal.ToHex(-1);
         //_0414_Third_Maximum_Number.ThirdMax(new int[] { 2, 2, 3, 1 });
         //_0434_Number_of_Segments_in_a_String.CountSegments("                ");
-        _0459_Repeated_Substring_Pattern.RepeatedSubstringPattern("");
+        //_0459_Repeated_Substring_Pattern.RepeatedSubstringPattern("");
+        //_3306_Count_of_Substrings_Containing_Every_Vowel_and_K_Consonants_II.CountOfSubstrings("ieaouqqieaouqq", 1);
+        //_2062_Count_Vowel_Substrings_of_a_String.CountVowelSubstrings("aeiouaaaac");
+        _0415_Add_Strings.AddStrings("456", "77");
 
     }
 }
