@@ -10,7 +10,8 @@ namespace Leetcode.Easy
     {
         public int[] ConstructRectangle(int area)
         {
-            //
+            //runtime 100%
+            //重中間開始以較快
             var mid = (int)Math.Sqrt(area);
             var between = int.MaxValue;
 

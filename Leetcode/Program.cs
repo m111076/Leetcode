@@ -75,7 +75,9 @@ internal class Program
         //_0459_Repeated_Substring_Pattern.RepeatedSubstringPattern("");
         //_3306_Count_of_Substrings_Containing_Every_Vowel_and_K_Consonants_II.CountOfSubstrings("ieaouqqieaouqq", 1);
         //_2062_Count_Vowel_Substrings_of_a_String.CountVowelSubstrings("aeiouaaaac");
-        _0415_Add_Strings.AddStrings("456", "77");
+        //_0415_Add_Strings.AddStrings("456", "77");
+        //_1358_Number_of_Substrings_Containing_All_Three_Characters.NumberOfSubstrings("abc");
+        _3407_Substring_Matching_Pattern.HasMatch("leetcode", "s*et");
 
     }
 }
