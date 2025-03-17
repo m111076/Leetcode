@@ -77,7 +77,10 @@ internal class Program
         //_2062_Count_Vowel_Substrings_of_a_String.CountVowelSubstrings("aeiouaaaac");
         //_0415_Add_Strings.AddStrings("456", "77");
         //_1358_Number_of_Substrings_Containing_All_Three_Characters.NumberOfSubstrings("abc");
-        _3407_Substring_Matching_Pattern.HasMatch("leetcode", "s*et");
+        //_3407_Substring_Matching_Pattern.HasMatch("leetcode", "s*et");
+        //_2094_Finding_3_Digit_Even_Numbers.FindEvenNumbers(new int[] { 2, 1, 3, 0 });
+        //_0496_Next_Greater_Element_I.NextGreaterElement(new int[] { 4, 1, 2 }, new int[] { 1, 3, 4, 2 });
+        _3461_Check_If_Digits_Are_Equal_in_String_After_Operations_I.HasSameDigits("3902");
 
     }
 }
