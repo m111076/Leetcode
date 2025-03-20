@@ -10,25 +10,44 @@ namespace Leetcode.Easy
     {
         public static bool HasSameDigits(string s)
         {
-            var length = s.Length;
-            var result = string.Empty;
+            //runtime 93%
+            var sArr = s.ToCharArray();
+            var length = sArr.Length;
 
-            while (s.Length > 2)
+            while (length > 2)
             {
-                var tmp = 0;
+                var tmpLength = 0;
 
-                for (var i = 0; i < s.Length - 1; i++)
+                for (var i = 0; i < length - 1; i++)
                 {
-                    tmp += int.Parse(s[i].ToString());
-                    tmp += int.Parse(s[i + 1].ToString());
-                    result += (tmp % 10).ToString();
-                    tmp = 0;
+                    sArr[i] = (Char)((sArr[i] - '0' + sArr[i + 1] - '0') % 10 + '0');
+                    tmpLength++;
                 }
-
-                s = result;
+                length = tmpLength;
             }
 
-            return s[0] == s[1];
+            return sArr[0] == sArr[1];
+
+            ////runtime 5.7%
+            //var length = s.Length;
+
+            //while (s.Length > 2)
+            //{
+            //    var result = string.Empty;
+            //    var tmp = 0;
+
+            //    for (var i = 0; i < s.Length - 1; i++)
+            //    {
+            //        tmp += int.Parse(s[i].ToString());
+            //        tmp += int.Parse(s[i + 1].ToString());
+            //        result += (tmp % 10).ToString();
+            //        tmp = 0;
+            //    }
+
+            //    s = result;
+            //}
+
+            //return s[0] == s[1];
         }
     }
 }
