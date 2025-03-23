@@ -80,7 +80,8 @@ internal class Program
         //_3407_Substring_Matching_Pattern.HasMatch("leetcode", "s*et");
         //_2094_Finding_3_Digit_Even_Numbers.FindEvenNumbers(new int[] { 2, 1, 3, 0 });
         //_0496_Next_Greater_Element_I.NextGreaterElement(new int[] { 4, 1, 2 }, new int[] { 1, 3, 4, 2 });
-        _3461_Check_If_Digits_Are_Equal_in_String_After_Operations_I.HasSameDigits("3902");
+        //_3461_Check_If_Digits_Are_Equal_in_String_After_Operations_I.HasSameDigits("3902");
+        _3494_Find_the_Minimum_Amount_of_Time_to_Brew_Potions.MinTime(new int[] { 1, 5, 2, 4 }, new int[] { 5, 1, 4, 2 });
 
     }
 }
