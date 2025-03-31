@@ -8,9 +8,9 @@ namespace Leetcode.Easy
 {
     public class _0977_Squares_of_a_Sorted_Array
     {
-        public int[] SortedSquares(int[] nums)
-        {
+        //public int[] SortedSquares(int[] nums)
+        //{
 
-        }
+        //}
     }
 }
