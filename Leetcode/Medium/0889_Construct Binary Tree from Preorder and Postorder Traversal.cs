@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leetcode.Medium
 {
-    public class _889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal
+    public class _0889_Construct_Binary_Tree_from_Preorder_and_Postorder_Traversal
     {
         public int preIdx = 0;
         public int posIdx = 0;

@@ -83,7 +83,9 @@ internal class Program
         //_3461_Check_If_Digits_Are_Equal_in_String_After_Operations_I.HasSameDigits("3902");
         //_3494_Find_the_Minimum_Amount_of_Time_to_Brew_Potions.MinTime(new int[] { 1, 5, 2, 4 }, new int[] { 5, 1, 4, 2 });
         //_2551_Put_Marbles_in_Bags.PutMarbles(new int[] { 1, 3, 5, 1 }, 2);
-        _2451_Odd_String_Difference.OddString(new string[] { "adc", "wzy", "abc" });
+        //_2451_Odd_String_Difference.OddString(new string[] { "adc", "wzy", "abc" });
+        //_1637_Widest_Vertical_Area_Between_Two_Points_Containing_No_Points.MaxWidthOfVerticalArea(new int[][] { new int[] { 8, 7 }, new int[] { 9, 9 }, new int[] { 7, 4 } , new int[] { 9, 7 } });
+        _3396_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.MinimumOperations(new int[] { 1, 2, 3, 4, 2, 3, 3, 5, 7 });
 
     }
 }
