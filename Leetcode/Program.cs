@@ -85,7 +85,8 @@ internal class Program
         //_2551_Put_Marbles_in_Bags.PutMarbles(new int[] { 1, 3, 5, 1 }, 2);
         //_2451_Odd_String_Difference.OddString(new string[] { "adc", "wzy", "abc" });
         //_1637_Widest_Vertical_Area_Between_Two_Points_Containing_No_Points.MaxWidthOfVerticalArea(new int[][] { new int[] { 8, 7 }, new int[] { 9, 9 }, new int[] { 7, 4 } , new int[] { 9, 7 } });
-        _3396_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.MinimumOperations(new int[] { 1, 2, 3, 4, 2, 3, 3, 5, 7 });
+        //_3396_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.MinimumOperations(new int[] { 1, 2, 3, 4, 2, 3, 3, 5, 7 });
+        _0984_String_Without_AAA_or_BBB.StrWithout3a3b(3, 3);
 
     }
 }
