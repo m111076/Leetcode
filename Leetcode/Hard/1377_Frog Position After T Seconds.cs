@@ -8,9 +8,9 @@ namespace Leetcode.Hard
 {
     public class _1377_Frog_Position_After_T_Seconds
     {
-        public double FrogPosition(int n, int[][] edges, int t, int target)
-        {
+        //public double FrogPosition(int n, int[][] edges, int t, int target)
+        //{
 
-        }
+        //}
     }
 }
