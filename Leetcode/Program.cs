@@ -87,7 +87,8 @@ internal class Program
         //_1637_Widest_Vertical_Area_Between_Two_Points_Containing_No_Points.MaxWidthOfVerticalArea(new int[][] { new int[] { 8, 7 }, new int[] { 9, 9 }, new int[] { 7, 4 } , new int[] { 9, 7 } });
         //_3396_Minimum_Number_of_Operations_to_Make_Elements_in_Array_Distinct.MinimumOperations(new int[] { 1, 2, 3, 4, 2, 3, 3, 5, 7 });
         //_0984_String_Without_AAA_or_BBB.StrWithout3a3b(3, 3);
-        _2824_Count_Pairs_Whose_Sum_is_Less_than_Target.CountPairs(new int[] { -1, 1, 2, 3, 1 },2);
+        //_2824_Count_Pairs_Whose_Sum_is_Less_than_Target.CountPairs(new int[] { -1, 1, 2, 3, 1 },2);
+        _2461_Maximum_Sum_of_Distinct_Subarrays_With_Length_K.MaximumSubarraySum(new int[] { 1, 5, 4, 2, 9, 9, 9 }, 3);
 
     }
 }
