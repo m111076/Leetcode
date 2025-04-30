@@ -92,7 +92,8 @@ internal class Program
         //_0080_Remove_Duplicates_from_Sorted_Array_II.RemoveDuplicates(new int[] { 0, 0, 1, 1, 1, 1, 2, 3, 3 });
         //_1399_Count_Largest_Group.CountLargestGroup(2);
         //_0494_Target_Sum.FindTargetSumWays(new int[] { 100 }, -200);
-
+        //_1423_Maximum_Points_You_Can_Obtain_from_Cards.MaxScore(new int[] { 1, 2, 3, 4, 5, 6, 1 }, 3);
+        _0003_Longest_Substring_Without_Repeating_Characters.LengthOfLongestSubstring("abcabcbb");
 
     }
 }
