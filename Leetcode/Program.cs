@@ -93,7 +93,9 @@ internal class Program
         //_1399_Count_Largest_Group.CountLargestGroup(2);
         //_0494_Target_Sum.FindTargetSumWays(new int[] { 100 }, -200);
         //_1423_Maximum_Points_You_Can_Obtain_from_Cards.MaxScore(new int[] { 1, 2, 3, 4, 5, 6, 1 }, 3);
-        _0003_Longest_Substring_Without_Repeating_Characters.LengthOfLongestSubstring("abcabcbb");
+        //_0003_Longest_Substring_Without_Repeating_Characters.LengthOfLongestSubstring("abcabcbb");
+        //_0904_Fruit_Into_Baskets.TotalFruit(new int[] { 1, 2, 3, 2, 2 });
+        _2024_Maximize_the_Confusion_of_an_Exam.MaxConsecutiveAnswers("TFFT", 1);
 
     }
 }
