@@ -10,20 +10,43 @@ namespace Leetcode.Medium
     {
         public static int NumberOfSubstrings(string s)
         {
-            //runtime 20%
+            //runtime 89%
+            //time complexity O(n)
+            //space complexity O(1)
+            //滑動視窗
+            //當滿足abc接有之後，window右端點至s尾端之組合皆符合需求
+            var left = 0;
+            var right = 0;
             var abcArr = new int[3];
             var result = 0;
 
-            for (var i = 0; i < s.Length; i++)
+            while (right < s.Length)
             {
-                abcArr[s[i] - 'a'] = i + 1;
+                abcArr[s[right] - 'a']++;
 
-                if (!abcArr.Contains(0))
+                while (abcArr[0] >= 1 && abcArr[1] >= 1 && abcArr[2] >= 1)
                 {
-                    result += abcArr.Min();
+                    result += s.Length - right;
+                    abcArr[s[left++] - 'a']--;
                 }
+                right++;
             }
             return result;
+
+            //runtime 20%
+            //var abcArr = new int[3];
+            //var result = 0;
+
+            //for (var i = 0; i < s.Length; i++)
+            //{
+            //    abcArr[s[i] - 'a'] = i + 1;
+
+            //    if (!abcArr.Contains(0))
+            //    {
+            //        result += abcArr.Min();
+            //    }
+            //}
+            //return result;
 
             //runtime 7%
             //var abcDic = new Dictionary<char, int>();

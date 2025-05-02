@@ -10,31 +10,62 @@ namespace Leetcode.Medium
     {
         public int CountCompleteSubarrays(int[] nums)
         {
-            //runtime 50%
+            //runtime 60%
             //time complexity O(n)
             //space complexity O(n)
+            //滑動視窗
+            var left = 0;
+            var right = 0;
             var dis = nums.Distinct().Count();
-            var tmpDic = new Dictionary<int, int>();
+            var dic = new Dictionary<int, int>();
             var result = 0;
 
-            for (var i = 0; i < nums.Length; i++)
+            while (right < nums.Length)
             {
-                if (tmpDic.ContainsKey(nums[i]))
+                if (!dic.TryAdd(nums[right], 1))
                 {
-                    tmpDic[nums[i]] = i;
-                }
-                else
-                {
-                    tmpDic.Add(nums[i], i);
+                    dic[nums[right]]++;
                 }
 
-                if (tmpDic.Count == dis)
+                while (dic.Count == dis)
                 {
-                    result += tmpDic.Min(s => s.Value) + 1;
+                    dic[nums[left]]--;
+
+                    if (dic[nums[left]] == 0)
+                        dic.Remove(nums[left]);
+                    left++;
                 }
+                result += left;
+                right++;
             }
 
             return result;
+
+            //runtime 50%
+            //time complexity O(n)
+            //space complexity O(n)
+            //var dis = nums.Distinct().Count();
+            //var tmpDic = new Dictionary<int, int>();
+            //var result = 0;
+
+            //for (var i = 0; i < nums.Length; i++)
+            //{
+            //    if (tmpDic.ContainsKey(nums[i]))
+            //    {
+            //        tmpDic[nums[i]] = i;
+            //    }
+            //    else
+            //    {
+            //        tmpDic.Add(nums[i], i);
+            //    }
+
+            //    if (tmpDic.Count == dis)
+            //    {
+            //        result += tmpDic.Min(s => s.Value) + 1;
+            //    }
+            //}
+
+            //return result;
         }
     }
 }

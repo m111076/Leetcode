@@ -10,26 +10,54 @@ namespace Leetcode.Medium
     {
         public long CountSubarrays(int[] nums, int k)
         {
-            //runtime 60%
-            //slidingWindow
-            //sapce complexity O(1)
-            var max = nums.Max();
+            //runtime 52%
             var left = 0;
             var right = 0;
             var result = 0L;
-            var maxCnt = 0;
+            var max = nums.Max();
+            var cnt = 0;
 
-            for (; right < nums.Length; right++)
+            while (right < nums.Length)
             {
-                maxCnt += nums[right] == max ? 1 : 0;
-                while (maxCnt >= k)
+                if (nums[right] == max)
+                    cnt++;
+
+                while (cnt >= k)
                 {
-                    maxCnt -= nums[left++] == max ? 1 : 0;
+                    result += nums.Length - right;
+
+                    if (nums[left++] == max)
+                        cnt--;
                 }
-                result += left;
+
+                //出來後不滿足，但left為滿足的，因此有0~left-1個
+                //result += left;
+
+                right++;
             }
 
             return result;
+
+            //runtime 60%
+            //slidingWindow
+            //sapce complexity O(1)
+            //var max = nums.Max();
+            //var left = 0;
+            //var right = 0;
+            //var result = 0L;
+            //var maxCnt = 0;
+
+            //for (; right < nums.Length; right++)
+            //{
+            //    maxCnt += nums[right] == max ? 1 : 0;
+            //    while (maxCnt >= k)
+            //    {
+            //        maxCnt -= nums[left++] == max ? 1 : 0;
+            //    }
+            //    result += left;
+            //}
+
+            //return result;
 
 
             //runtime 26%
