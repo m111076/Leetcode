@@ -10,33 +10,40 @@ namespace Leetcode.Easy
     {
         public static int SearchInsert(int[] nums, int target)
         {
-            for (var i = 0; i < nums.Length; i++)
-            {
-                if (nums[i] == target)
-                    return i;
-                else if (nums[i] > target)
-                {
-                    return i;
-                }
-                else if (target > nums[i] && i == nums.Length - 1)
-                {
-                    return i + 1;
-                }
+            //for (var i = 0; i < nums.Length; i++)
+            //{
+            //    if (nums[i] == target)
+            //        return i;
+            //    else if (nums[i] > target)
+            //    {
+            //        return i;
+            //    }
+            //    else if (target > nums[i] && i == nums.Length - 1)
+            //    {
+            //        return i + 1;
+            //    }
 
+            //}
+
+            //return default;
+            //runtime 100%
+            //time complexity O(logN)
+            var left = 0;
+            var right = nums.Length - 1;
+
+            while (left <= right)
+            {
+                var mid = left + (right - left) / 2;
+
+                if (nums[mid] == target)
+                    return mid;
+                else if (nums[mid] > target)
+                    right = mid - 1;
+                else
+                    left = mid + 1;
             }
 
-            return default;
-
-            //二分收尋
-            //int left = 0, right = nums.Length - 1, mid;
-            //while (left <= right)
-            //{
-            //    mid = (right + left) / 2;
-            //    if (nums[mid] < target) left = mid + 1;
-            //    else if (nums[mid] > target) right = mid - 1;
-            //    else return mid;
-            //}
-            //return left;
+            return left;
         }
     }
 }

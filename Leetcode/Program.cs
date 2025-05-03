@@ -103,6 +103,7 @@ internal class Program
         //tmp.Add(new List<int>() { 1, 2, 3 });
         //tmp.Add(new List<int>() { 1, 2, 3 });
         //_0632_Smallest_Range_Covering_Elements_from_K_Lists.SmallestRange(tmp);
-        _3298_Count_Substrings_That_Can_Be_Rearranged_to_Contain_a_String_II.ValidSubstringCount("dddddededddeeeddd", "eee");
+        //_3298_Count_Substrings_That_Can_Be_Rearranged_to_Contain_a_String_II.ValidSubstringCount("dddddededddeeeddd", "eee");
+        _0930_Binary_Subarrays_With_Sum.NumSubarraysWithSum(new int[] { 0, 0, 0, 0, 0 }, 0);
     }
 }

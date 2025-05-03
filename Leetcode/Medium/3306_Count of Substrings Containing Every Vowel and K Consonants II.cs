@@ -9,88 +9,54 @@ namespace Leetcode.Medium
 {
     public class _3306_Count_of_Substrings_Containing_Every_Vowel_and_K_Consonants_II
     {
-        public static long CountOfSubstrings(string word, int k)
+        //runtime 14%
+        //time complexity O(n)
+        //space complexity O(n)
+        //滑動視窗 at least
+        public long CountOfSubstrings(string word, int k)
         {
+            return Check(word, k) - Check(word, k + 1);
+        }
 
-            var result = 0L;
-            var length = word.Length;
-
-            if (length < 5 + k)
-                return result;
-
-            var vowelSet = new HashSet<char>("aeiou");
-            var tmpDic = new Dictionary<char, int>();
-            var nextCons = new int[length];
-            var Id = length;
-
-            for (int i = length - 1; i >= 0; i--)
-            {
-                nextCons[i] = Id;
-                if (!vowelSet.Contains(word[i]))
-                    Id = i;
-            }
-
-
-            var normalCnt = 0;
+        private long Check(string word, int k)
+        {
+            var volews = new HashSet<char>() { 'a', 'e', 'i', 'o', 'u' };
             var left = 0;
             var right = 0;
-            var leftvowel = 0;
+            var dic = new Dictionary<char, int>();
+            var cnt = 0;
+            var result = 0L;
 
-
-            while (right < length)
+            while (right < word.Length)
             {
-                if (vowelSet.Contains(word[right]))
+                if (volews.Contains(word[right]))
                 {
-                    if (tmpDic.ContainsKey(word[right]))
-                        tmpDic[word[right]]++;
-                    else
-                        tmpDic.Add(word[right], 1);
+                    if (!dic.TryAdd(word[right], 1))
+                        dic[word[right]]++;
                 }
                 else
-                    normalCnt++;
+                    cnt++;
 
-                while (normalCnt > k && left <= right)
+                while (dic.Count == 5 && cnt >= k)
                 {
-                    if (tmpDic.ContainsKey(word[left]))
+                    var target = word[left++];
+                    if (volews.Contains(target))
                     {
-                        if (--tmpDic[word[left]] == 0)
-                        {
-                            tmpDic.Remove(word[left++]);
-                        }
+                        dic[target]--;
+                        if (dic[target] == 0)
+                            dic.Remove(target);
                     }
                     else
                     {
-                        normalCnt--;
-                        left++;
+                        cnt--;
                     }
                 }
 
-                while (normalCnt == k && tmpDic.Count == 5 && left < right)
-                {
-                    result += (nextCons[right] - right);
-
-                    if (tmpDic.ContainsKey(word[left]))
-                    {
-                        if (tmpDic[word[left]] - 1 != 0)
-                        {
-                            tmpDic[word[left]]--;
-                            left++;
-                        }
-                        else
-                            break;
-                    }
-                    else
-                    {
-                        if (normalCnt - 1 < k)
-                            break;
-                    }
-                }
-
+                result += left;
                 right++;
             }
 
             return result;
-
         }
     }
 }
