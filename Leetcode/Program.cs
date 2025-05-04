@@ -104,6 +104,8 @@ internal class Program
         //tmp.Add(new List<int>() { 1, 2, 3 });
         //_0632_Smallest_Range_Covering_Elements_from_K_Lists.SmallestRange(tmp);
         //_3298_Count_Substrings_That_Can_Be_Rearranged_to_Contain_a_String_II.ValidSubstringCount("dddddededddeeeddd", "eee");
-        _0930_Binary_Subarrays_With_Sum.NumSubarraysWithSum(new int[] { 0, 0, 0, 0, 0 }, 0);
+        //_0930_Binary_Subarrays_With_Sum.NumSubarraysWithSum(new int[] { 0, 0, 0, 0, 0 }, 0);
+        //_1170_Compare_Strings_by_Frequency_of_the_Smallest_Character.NumSmallerByFrequency(new string[] { "bbb", "cc" }, new string[] { "a", "aa", "aaa", "aaaa" });
+        _3488_Closest_Equal_Element_Queries.SolveQueries(new int[] { 1, 3, 1, 4, 1, 3, 2 }, new int[] { 0, 3, 5 });
     }
 }
