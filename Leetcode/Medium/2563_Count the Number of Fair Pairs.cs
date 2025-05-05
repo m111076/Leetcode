@@ -10,6 +10,7 @@ namespace Leetcode.Medium
     {
         //runtime 100%
         //time complexity O(nlogn) sort為n*logn
+        //sliding window
         public long CountFairPairs(int[] nums, int lower, int upper)
         {
             Array.Sort(nums);
@@ -34,5 +35,40 @@ namespace Leetcode.Medium
 
             return result;
         }
+
+        //
+        //binary Search
+        //29%
+        //public long CountFairPairs(int[] nums, int lower, int upper)
+        //{
+        //    Array.Sort(nums);
+        //    var result = 0L;
+        //    for (int i = 0; i < nums.Length; i++)
+        //    {
+        //        var low = BS(nums, i, lower - nums[i]);
+        //        var up = BS(nums, i, upper - nums[i] + 1);
+
+        //        result += up - low;
+        //    }
+        //    return result;
+        //}
+
+        //private long BS(int[] iNums, int right, int iVal)
+        //{
+        //    var left = 0;
+
+        //    while (left < right)
+        //    {
+        //        var mid = left + (right - left) / 2;
+
+        //        if (iNums[mid] >= iVal)
+        //            right = mid;
+        //        else
+        //            left = mid + 1;
+        //    }
+
+        //    return left;
+        //}
+
     }
 }

@@ -106,6 +106,7 @@ internal class Program
         //_3298_Count_Substrings_That_Can_Be_Rearranged_to_Contain_a_String_II.ValidSubstringCount("dddddededddeeeddd", "eee");
         //_0930_Binary_Subarrays_With_Sum.NumSubarraysWithSum(new int[] { 0, 0, 0, 0, 0 }, 0);
         //_1170_Compare_Strings_by_Frequency_of_the_Smallest_Character.NumSmallerByFrequency(new string[] { "bbb", "cc" }, new string[] { "a", "aa", "aaa", "aaaa" });
-        _3488_Closest_Equal_Element_Queries.SolveQueries(new int[] { 1, 3, 1, 4, 1, 3, 2 }, new int[] { 0, 3, 5 });
+        //_3488_Closest_Equal_Element_Queries.SolveQueries(new int[] { 1, 3, 1, 4, 1, 3, 2 }, new int[] { 0, 3, 5 });
+        _2563_Count_the_Number_of_Fair_Pairs.CountFairPairs(new int[] { 0, 1, 7, 4, 4, 5 }, 3, 6);
     }
 }
