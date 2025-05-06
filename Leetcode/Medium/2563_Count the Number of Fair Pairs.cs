@@ -20,7 +20,6 @@ namespace Leetcode.Medium
         private long FairPairsCounter(int[] iNums, int iVal)
         {
             var result = 0L;
-
             var right = iNums.Length - 1;
 
             for (var left = 0; left < right; left++)
