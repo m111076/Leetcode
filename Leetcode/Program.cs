@@ -109,6 +109,9 @@ internal class Program
         //_3488_Closest_Equal_Element_Queries.SolveQueries(new int[] { 1, 3, 1, 4, 1, 3, 2 }, new int[] { 0, 3, 5 });
         //_2563_Count_the_Number_of_Fair_Pairs.CountFairPairs(new int[] { 0, 1, 7, 4, 4, 5 }, 3, 6);
         //_0658_Find_K_Closest_Elements.FindClosestElements(new int[] { 1, 2, 3, 4, 5 }, 4, 3);
-        _1818_Minimum_Absolute_Sum_Difference.MinAbsoluteSumDiff(new int[] { 1, 7, 5 }, new int[] { 2, 3, 5 });
+        //_1818_Minimum_Absolute_Sum_Difference.MinAbsoluteSumDiff(new int[] { 1, 7, 5 }, new int[] { 2, 3, 5 });
+        //_1283_Find_the_Smallest_Divisor_Given_a_Threshold.SmallestDivisor(new int[] { 21212, 10101, 12121 }, 1000000);
+        //_2682_Find_the_Losers_of_the_Circular_Game.CircularGameLosers(5, 2);
+        _3280_Convert_Date_to_Binary.ConvertDateToBinary("2080-02-29");
     }
 }
