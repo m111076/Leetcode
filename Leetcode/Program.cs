@@ -114,6 +114,8 @@ internal class Program
         //_2682_Find_the_Losers_of_the_Circular_Game.CircularGameLosers(5, 2);
         //_3280_Convert_Date_to_Binary.ConvertDateToBinary("2080-02-29");
         //_2187_Minimum_Time_to_Complete_Trips.MinimumTime(new int[] { 39, 82, 69, 37, 78, 14, 93, 36, 66, 61, 13, 58, 57, 12, 70, 14, 67, 75, 91, 1, 34, 68, 73, 50, 13, 40, 81, 21, 79, 12, 35, 18, 71, 43, 5, 50, 37, 16, 15, 6, 61, 7, 87, 43, 27, 62, 95, 45, 82, 100, 15, 74, 33, 95, 38, 88, 91, 47, 22, 82, 51, 19, 10, 24, 87, 38, 5, 91, 10, 36, 56, 86, 48, 92, 10, 26, 63, 2, 50, 88, 9, 83, 20, 42, 59, 55, 8, 15, 48, 25 }, 4187);
-        _3296_Minimum_Number_of_Seconds_to_Make_Mountain_Height_Zero.MinNumberOfSeconds(1, new int[] { 2, 1 });
+        //_3296_Minimum_Number_of_Seconds_to_Make_Mountain_Height_Zero.MinNumberOfSeconds(1, new int[] { 2, 1 });
+        //_3048_Earliest_Second_to_Mark_Indices_I.EarliestSecondToMarkIndices(new int[] { 2, 2, 0 }, new int[] { 2, 2, 2, 2, 3, 2, 2, 1 });
+        _1870_Minimum_Speed_to_Arrive_on_Time.MinSpeedOnTime(new int[] { 1, 3, 2 }, 2.7);
     }
 }
