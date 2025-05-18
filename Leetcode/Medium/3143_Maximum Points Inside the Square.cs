@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Leetcode.Medium
 {
-    internal class _2982_Find_Longest_Special_Substring_That_Occurs_Thrice_II
+    internal class _3143_Maximum_Points_Inside_the_Square
     {
-        //public int MaximumLength(string s)
+        //public int MaxPointsInsideSquare(int[][] points, string s)
         //{
 
         //}
