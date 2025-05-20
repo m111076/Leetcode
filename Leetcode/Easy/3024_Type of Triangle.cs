@@ -13,6 +13,7 @@ namespace Leetcode.Easy
             //runtime  12%
             //time complexity O(1)
             Array.Sort(nums);
+            
 
             if (nums[0] + nums[1] <= nums[2])
                 return "none";
