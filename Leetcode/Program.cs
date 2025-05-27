@@ -117,6 +117,7 @@ internal class Program
         //_3296_Minimum_Number_of_Seconds_to_Make_Mountain_Height_Zero.MinNumberOfSeconds(1, new int[] { 2, 1 });
         //_3048_Earliest_Second_to_Mark_Indices_I.EarliestSecondToMarkIndices(new int[] { 2, 2, 0 }, new int[] { 2, 2, 2, 2, 3, 2, 2, 1 });
         //_1870_Minimum_Speed_to_Arrive_on_Time.MinSpeedOnTime(new int[] { 1, 3, 2 }, 2.7);
-        _2131_Longest_Palindrome_by_Concatenating_Two_Letter_Words.LongestPalindrome(new string[] { "ab", "ty", "yt", "lc", "cl", "ab" });
+        //_2131_Longest_Palindrome_by_Concatenating_Two_Letter_Words.LongestPalindrome(new string[] { "ab", "ty", "yt", "lc", "cl", "ab" });
+        _2270_Number_of_Ways_to_Split_Array.WaysToSplitArray(new int[] { 10, 4, -8, 7 });
     }
 }
