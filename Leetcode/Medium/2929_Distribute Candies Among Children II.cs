@@ -13,7 +13,8 @@ namespace Leetcode.Medium
     //組合問題
     //將N個糖果分給3個人等 同於用兩個版子來分割
     //等於C(N+2,2)
-    //AUBUC = A+B+C-A∩B-A∩C-B∩C+A∩B∩C
+    //不合法 AUBUC = A+B+C-A∩B-A∩C-B∩C+A∩B∩C
+    //所有-全部不合法
     internal class _2929_Distribute_Candies_Among_Children_II
     {
         public long DistributeCandies(int n, int limit)
