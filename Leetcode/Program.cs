@@ -118,6 +118,11 @@ internal class Program
         //_3048_Earliest_Second_to_Mark_Indices_I.EarliestSecondToMarkIndices(new int[] { 2, 2, 0 }, new int[] { 2, 2, 2, 2, 3, 2, 2, 1 });
         //_1870_Minimum_Speed_to_Arrive_on_Time.MinSpeedOnTime(new int[] { 1, 3, 2 }, 2.7);
         //_2131_Longest_Palindrome_by_Concatenating_Two_Letter_Words.LongestPalindrome(new string[] { "ab", "ty", "yt", "lc", "cl", "ab" });
-        _2270_Number_of_Ways_to_Split_Array.WaysToSplitArray(new int[] { 10, 4, -8, 7 });
+        //_2270_Number_of_Ways_to_Split_Array.WaysToSplitArray(new int[] { 10, 4, -8, 7 });
+        //_2434_Using_a_Robot_to_Print_the_Lexicographically_Smallest_String.RobotWithString("vzhofnpo");
+        //_3170_Lexicographically_Minimum_String_After_Removing_Stars.ClearStars("aaba*");
+        //_3576_Transform_Array_to_All_Equal_Elements.CanMakeEqual(new int[] { -1, -1, -1, 1, 1, 1 }, 5);
+        //_2576_Find_the_Maximum_Number_of_Marked_Indices.MaxNumOfMarkedIndices(new int[] { 7, 6, 8 });
+        _0440_K_th_Smallest_in_Lexicographical_Order.FindKthNumber(13, 2);
     }
 }
