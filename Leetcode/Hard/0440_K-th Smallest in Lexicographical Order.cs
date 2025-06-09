@@ -6,41 +6,80 @@ using System.Threading.Tasks;
 
 namespace Leetcode.Hard
 {
-    internal static class _0440_K_th_Smallest_in_Lexicographical_Order
+    internal class _0440_K_th_Smallest_in_Lexicographical_Order
     {
-        private static int cnt = 0;
-        private static int result = 0;
-
-        public static int FindKthNumber(int n, int k)
+        public int FindKthNumber(int n, int k)
         {
-            for (var i = 1; i <= 9; i++)
-            {
-                DFS(i, n, k);
+            var current = 1; 
+            k--;
 
-                if (cnt >= k)
-                    break;
+            while (k > 0)
+            {
+                var steps = Count(n, current, current + 1);
+
+                if (steps <= k)
+                {
+                    current++;
+                    k -= (int)steps;
+                }
+                else
+                {
+                    current *= 10;
+                    k--;
+                }
             }
-            return result;
+
+            return current;
         }
 
-        private static void DFS(int current, int n, int k)
+        private long Count(int n, long current, long next)
         {
-            if (cnt >= k || current > n)
-                return;
+            var step = 0L;
 
-            if (++cnt == k)
+            while (current <= n)
             {
-                result = current;
-                return;
+                step += Math.Min(n + 1, next) - current;
+                current *= 10;
+                next *= 10;
             }
 
-            for (var i = 0; i <= 9; i++)
-            {
-                var next = current * 10 + i;
-                if (next > n)
-                    break;
-                DFS(next, n, k);
-            }
+            return step;
         }
+
+        //可以作但會超時
+        //private static int cnt = 0;
+        //private static long result = 0;
+
+        //public static int FindKthNumber(int n, int k)
+        //{
+        //    for (var i = 1; i <= 9; i++)
+        //    {
+        //        DFS(i, n, k);
+
+        //        if (cnt >= k)
+        //            break;
+        //    }
+        //    return (int)result;
+        //}
+
+        //private static void DFS(long current, int n, int k)
+        //{
+        //    if (cnt >= k || current > n)
+        //        return;
+
+        //    if (++cnt == k)
+        //    {
+        //        result = current;
+        //        return;
+        //    }
+
+        //    for (var i = 0; i <= 9; i++)
+        //    {
+        //        var next = current * 10 + i;
+        //        if (next > n)
+        //            break;
+        //        DFS(next, n, k);
+        //    }
+        //}
     }
 }

@@ -123,6 +123,6 @@ internal class Program
         //_3170_Lexicographically_Minimum_String_After_Removing_Stars.ClearStars("aaba*");
         //_3576_Transform_Array_to_All_Equal_Elements.CanMakeEqual(new int[] { -1, -1, -1, 1, 1, 1 }, 5);
         //_2576_Find_the_Maximum_Number_of_Marked_Indices.MaxNumOfMarkedIndices(new int[] { 7, 6, 8 });
-        _0440_K_th_Smallest_in_Lexicographical_Order.FindKthNumber(13, 2);
+        _0440_K_th_Smallest_in_Lexicographical_Order.FindKthNumber(10000, 50);
     }
 }
