@@ -28,17 +28,31 @@ namespace Leetcode.Easy
             //return default;
             //runtime 100%
             //time complexity O(logN)
-            var left = 0;
-            var right = nums.Length - 1;
+            //var left = 0;
+            //var right = nums.Length - 1;
 
-            while (left <= right)
+            //while (left <= right)
+            //{
+            //    var mid = left + (right - left) / 2;
+
+            //    if (nums[mid] == target)
+            //        return mid;
+            //    else if (nums[mid] > target)
+            //        right = mid - 1;
+            //    else
+            //        left = mid + 1;
+            //}
+
+            //return left;
+
+            var left = 0;
+            var right = nums.Length;
+
+            while (left < right)
             {
                 var mid = left + (right - left) / 2;
-
-                if (nums[mid] == target)
-                    return mid;
-                else if (nums[mid] > target)
-                    right = mid - 1;
+                if (nums[mid] >= target)
+                    right = mid;
                 else
                     left = mid + 1;
             }
