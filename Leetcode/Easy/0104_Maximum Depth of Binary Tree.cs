@@ -8,6 +8,8 @@ namespace Leetcode.Easy
 {
     public static class _104_Maximum_Depth_of_Binary_Tree
     {
+        //runtime 100%
+        //time complexity O(n) N層
         public static int MaxDepth(TreeNode root)
         {
             if (root == null) return 0;
@@ -16,19 +18,6 @@ namespace Leetcode.Easy
             var rightMax = MaxDepth(root.right);
 
             return Math.Max(leftMax, rightMax) + 1;
-        }
-
-        public class TreeNode
-        {
-            public int val;
-            public TreeNode left;
-            public TreeNode right;
-            public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-            {
-                this.val = val;
-                this.left = left;
-                this.right = right;
-            }
         }
     }
 }

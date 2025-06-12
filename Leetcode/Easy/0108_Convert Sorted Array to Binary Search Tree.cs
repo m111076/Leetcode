@@ -7,22 +7,25 @@ using System.Threading.Tasks;
 
 namespace Leetcode.Easy
 {
-    public static class _108_Convert_Sorted_Array_to_Binary_Search_Tree
+    public class _108_Convert_Sorted_Array_to_Binary_Search_Tree
     {
-        public static TreeNode SortedArrayToBST(int[] nums)
+        //runtime 100%
+        //time complexity O(n)
+        //space complexity O(n)
+        private int[] _nums;
+        public TreeNode SortedArrayToBST(int[] nums)
         {
-            return Helper(nums, 0, nums.Length - 1);
+            _nums = nums;
+            return BST(0, nums.Length - 1);
         }
 
-        public static TreeNode Helper(int[] iNums, int iStartIdx, int iEndIdx)
+        private TreeNode BST(int Start, int End)
         {
-            if (iEndIdx < iStartIdx)
-                return null;
+            var mid = (Start + End) / 2;
+            var node = new TreeNode(_nums[mid]);
+            node.left = Start < mid ? BST(Start, mid - 1) : null;
+            node.right = mid < End ? BST(mid + 1, End) : null;
 
-            var midIdx = (iStartIdx + iEndIdx) / 2;
-            var node = new TreeNode(iNums[midIdx]);
-            node.left = Helper(iNums, iStartIdx, midIdx - 1);
-            node.right = Helper(iNums, midIdx + 1, iEndIdx);
             return node;
         }
     }

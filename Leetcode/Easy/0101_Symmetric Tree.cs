@@ -8,6 +8,8 @@ namespace Leetcode.Easy
 {
     public class _101_Symmetric_Tree
     {
+        //runtime 100%
+        //time complexity O(n) N層
         public static bool IsSymmetric(TreeNode root)
         {
             return Check(root.left, root.right);
@@ -15,23 +17,10 @@ namespace Leetcode.Easy
 
         public static bool Check(TreeNode iLeft, TreeNode iRight)
         {
-            if (iLeft == null || iRight == null) return iLeft == iRight;
+            if (iLeft == null || iRight == null) return iLeft == iRight;//同時為null也算相同
             if (iLeft.val != iRight.val) return false;
 
             return Check(iLeft.left, iRight.right) && Check(iLeft.right, iRight.left);
-        }
-
-        public class TreeNode
-        {
-            public int val;
-            public TreeNode left;
-            public TreeNode right;
-            public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-            {
-                this.val = val;
-                this.left = left;
-                this.right = right;
-            }
         }
     }
 

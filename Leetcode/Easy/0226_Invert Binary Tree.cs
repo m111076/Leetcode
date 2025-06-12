@@ -11,6 +11,8 @@ namespace Leetcode.Easy
         public TreeNode InvertTree(TreeNode root)
         {
             //runtime 100% memory 38%
+            //time complexity O(n)
+            //space complexity 最壞O(n)/最好O(logn)
             //感覺可以用遞迴
             //左右又互換後傳回
             if (root == null)
