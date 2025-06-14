@@ -125,5 +125,6 @@ internal class Program
         //_2576_Find_the_Maximum_Number_of_Marked_Indices.MaxNumOfMarkedIndices(new int[] { 7, 6, 8 });
         //_0440_K_th_Smallest_in_Lexicographical_Order.FindKthNumber(10000, 50);
         //_0131_Palindrome_Partitioning.Partition("aab");
+        //_0049_Group_Anagrams.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
     }
 }

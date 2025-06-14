@@ -8,23 +8,30 @@ namespace Leetcode.Easy
 {
     public class _1_Two_Sum
     {
+        //runtime 98%
+        //time complexity O(n)
+        //space complexity O(n)
+        //用字典紀錄剩下的部分，然後查表
         public static int[] TwoSum(int[] nums, int target)
         {
-            var subDic = new Dictionary<int, int>();
-            var length = nums.GetLength(0);
-            for (var i = 0; i < length; i++)
+            var dic = new Dictionary<int, int>();
+            var result = new int[2];
+
+            for (int i = 0; i < nums.Length; i++)
             {
-                var sub = target - nums[i];
-                if (subDic.ContainsKey(sub))
+                if (dic.TryGetValue(nums[i], out var val))
                 {
-                    return new int[] { subDic[sub], i };
+                    result[0] = val;
+                    result[1] = i;
+                    return result;
                 }
-                if (!subDic.ContainsKey(nums[i]))
+                else
                 {
-                    subDic.Add(nums[i], i);
+                    dic.TryAdd(target - nums[i], i);
                 }
             }
-            return null;
+
+            return result;
         }
     }
 }

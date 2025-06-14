@@ -8,9 +8,9 @@ namespace Leetcode.Medium
 {
     internal class _0437_Path_Sum_III
     {
-        public int PathSum(TreeNode root, int targetSum)
-        {
+        //public int PathSum(TreeNode root, int targetSum)
+        //{
 
-        }
+        //}
     }
 }

@@ -8,70 +8,36 @@ namespace Leetcode.Easy
 {
     public class _20_Valid_Parentheses
     {
+        //runtime 81%
+        //time complexity O(n)
+        //space complexity O(n)
+        //先進後出
         public static bool IsValid(string s)
         {
-            //var k = new Stack<char>();
+            var cStack = new Stack<char>();
 
-            //foreach (char c in s)
-            //{
-            //    if (c == '(') { k.Push(')'); continue; }
-            //    if (c == '{') { k.Push('}'); continue; }
-            //    if (c == '[') { k.Push(']'); continue; }
-            //    if (k.Count == 0 || c != k.Pop()) return false;
-            //}
-            //return k.Count == 0;
-
-            //var l = s.Length;
-            //var hL = l / 2;
-            //for (var i = 0; i < hL; i++)
-            //{
-            //    var idx = i * 2 + 1;
-            //    if (s[idx].ToString() == LeftGetRight(s[i * 2].ToString()))
-            //        continue;
-            //    else
-            //        return false;
-            //}
-            //return true;
-
-            var tempS = string.Empty;
-
-            foreach (char c in s)
+            foreach (var c in s)
             {
-                if (c == ')')
+                if (c == '(')
                 {
-                    if (!tempS.Contains("("))
-                        return false;
+                    cStack.Push(')');
+                    continue;
                 }
-                else if (c == '}')
+                if (c == '[')
                 {
-                    if (!tempS.Contains("{"))
-                        return false;
+                    cStack.Push(']');
+                    continue;
                 }
-                else if (c == ']')
+                if (c == '{')
                 {
-                    if (!tempS.Contains("["))
-                        return false;
+                    cStack.Push('}');
+                    continue;
                 }
-                else
-                {
-                    tempS += c;
-                }
+                if (cStack.Count == 0 || cStack.Pop() != c)
+                    return false;
             }
-            return true;
-        }
 
-        public string LeftGetRight(string s)
-        {
-            switch (s)
-            {
-                case "(":
-                    return ")";
-                case "{":
-                    return "}";
-                case "[":
-                    return "]";
-            }
-            return null;
+            return cStack.Count == 0;
         }
     }
 
