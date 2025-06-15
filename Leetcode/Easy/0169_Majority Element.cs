@@ -8,51 +8,29 @@ namespace Leetcode.Easy
 {
     public class _0169_Majority_Element
     {
+        //runtime 100%
+        //time complexity O(n)
+        //space complexity O(1)
+        //莫爾投票法
         public int MajorityElement(int[] nums)
         {
-            //???????
-            //Array.Sort(nums);
-            //return nums[nums.Length / 2];
+            var target = nums[0];
+            var cnt = 1;
 
-            //參考 摩爾投票法(Moore voting)
-            //int candidate = nums[0];
-            //int count = 1;
-
-            //for (int i = 1; i < nums.Length; i++)
-            //{
-            //    if (nums[i] == candidate)
-            //    {
-            //        count++;
-            //    }
-            //    else
-            //    {
-            //        count--;
-            //        if (count == 0)
-            //        {
-            //            candidate = nums[i];
-            //            count = 1;
-            //        }
-            //    }
-            //}
-
-            //return candidate;
-
-
-
-            //Runtime 37% 爛死
-            var numDis = nums.Distinct();
-            var half = nums.Length / 2;
-            var target = 0;
-
-            foreach (int num in numDis)
+            for (var i = 1; i < nums.Length; i++)
             {
-                var val = nums.Count(n => n == num);
-                if (val > half)
+                if (target != nums[i])
                 {
-                    target = num;
-                    break;
+                    if (--cnt == 0)
+                    {
+                        target = nums[i];
+                        cnt = 1;
+                    }
                 }
+                else
+                    cnt++;
             }
+
             return target;
         }
     }

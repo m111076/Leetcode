@@ -8,27 +8,20 @@ namespace Leetcode.Easy
 {
     public class _0136_Single_Number
     {
+        //runtime 100%
+        //time complexity O(n)
+        //space complexity O(1)
+        //XOR運算
         public int SingleNumber(int[] nums)
         {
-            int ret = 0;
-            foreach (var num in nums)
+            var result = 0;
+
+            foreach (var item in nums)
             {
-                //互斥運算 位元運算較快
-                ret ^= num;
+                result ^= item;
             }
-            return ret;
 
-            //runtime 45%
-            //var apperNums = new Dictionary<int, int>();
-
-            //foreach (var num in nums)
-            //{
-            //    if (apperNums.ContainsKey(num))
-            //        apperNums.Remove(num);
-            //    else
-            //        apperNums.Add(num, num);
-            //}
-            //return apperNums.First().Key;
+            return result;
         }
     }
 }
