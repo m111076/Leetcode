@@ -8,20 +8,23 @@ namespace Leetcode.Medium
 {
     public class _0053_Maximum_Subarray
     {
+        //runtime 100%k
+        //time complexity O(n)
+        //space complexity O(1)
         public int MaxSubArray(int[] nums)
         {
-            //runtime 100%
-            //Kadane algorithm
-            var result = nums[0];
             var sum = 0;
+            var result = int.MinValue;
 
-            foreach (var num in nums)
+            foreach (var n in nums)
             {
-                sum += num;
+                sum += n;
                 result = Math.Max(result, sum);
 
                 if (sum < 0)
+                {
                     sum = 0;
+                }
             }
 
             return result;
