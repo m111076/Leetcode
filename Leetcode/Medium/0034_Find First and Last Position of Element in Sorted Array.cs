@@ -14,27 +14,31 @@ namespace Leetcode.Medium
         //Binary Search close section
         public int[] SearchRange(int[] nums, int target)
         {
-            var start = LowerBound(nums, target);
-            if (start == nums.Length || nums[start] != target)
-                return new int[] { -1, -1 };
+            var start = Check(nums, target - 1);
+            var end = Check(nums, target) - 1;
 
-            var end = LowerBound(nums, target + 1) - 1;
-            return new int[] { start, end };
+            if (start >= 0 && start < nums.Length && nums[start] == target)
+                return new int[] { start, end };
+            else
+                return new int[] { -1, -1 };
         }
 
-        public int LowerBound(int[] nums, int target)
+        public int Check(int[] nums, int target)
         {
             var left = 0;
-            var right = nums.Length - 1;
+            var right = nums.Length;
 
-            while (left <= right)
+            while (left < right)
             {
                 var mid = left + (right - left) / 2;
-
-                if (nums[mid] >= target)
-                    right = mid - 1;
+                if (nums[mid] > target)
+                {
+                    right = mid;
+                }
                 else
+                {
                     left = mid + 1;
+                }
             }
 
             return left;
