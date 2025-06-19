@@ -8,25 +8,30 @@ namespace Leetcode.Easy
 {
     public class _118_Pascal_s_Triangle
     {
+        //runtime 100%
+        //time complexity O(n^2)
+        //space complexity O(n^2)
         public IList<IList<int>> Generate(int numRows)
         {
             var result = new List<IList<int>>();
-            for (var i = 1; i <= numRows; i++)
+            for (var i = 0; i < numRows; i++)
             {
-                var tempList = new List<int>();
-                tempList.Add(1);
-                if (i != 1)
-                {
-                    var target = result.Last();
+                var row = new List<int>();
 
-                    for (var j = 0; j < target.Count - 1; j++)
+                for (var j = 0; j <= i; j++)
+                {
+                    if (j == 0 || j == i)
                     {
-                        tempList.Add(target[j] + target[j + 1]);
+                        row.Add(1);
                     }
-                    tempList.Add(1);
+                    else
+                    {
+                        row.Add(result[i - 1][j - 1] + result[i - 1][j]);
+                    }
                 }
-                result.Add(tempList);
+                result.Add(row);
             }
+
             return result;
         }
     }

@@ -9,24 +9,21 @@ namespace Leetcode.Easy
 {
     public class _70_Climbing_Stairs
     {
+        //runtime 100%
+        //time complexity O(n)
+        //space complexity O(n)
         public static int ClimbStairs(int n)
         {
-            if (n <= 1) return 1;
-            var stepRecord = new int[n];
+            var dp = new int[n + 1];
+            dp[0] = 1;
+            dp[1] = 1;
 
-            stepRecord[0] = 1; stepRecord[1] = 2;
-            for (int i = 2; i < n; ++i)
+            for (var i = 2; i <= n; i++)
             {
-                stepRecord[i] = stepRecord[i - 1] + stepRecord[i - 2];
+                dp[i] = dp[i - 1] + dp[i - 2];
             }
-            return stepRecord[n-1];
 
-            //時間複雜度2^n
-            //太花時間
-            //if (n <= 0) return 0;
-            //else if (n == 1) return 1;
-            //else if (n == 2) return 2;
-            //else return ClimbStairs(n - 1) + ClimbStairs(n - 2);
+            return dp[n];
         }
     }
 }
