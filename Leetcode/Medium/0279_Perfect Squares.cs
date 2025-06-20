@@ -8,7 +8,7 @@ namespace Leetcode.Medium
 {
     internal class _0279_Perfect_Squares
     {
-        //runtime 78%
+        //runtime 88%
         //time complexity O(n * sqrt(n))
         //space complexity O(n)
         //動態規劃題目
@@ -22,6 +22,7 @@ namespace Leetcode.Medium
             for (var i = 2; i <= n; i++)
             {
                 dp[i] = int.MaxValue;
+
                 for (var j = 1; j * j <= i; j++)
                 {
                     dp[i] = Math.Min(dp[i], dp[i - j * j] + 1);

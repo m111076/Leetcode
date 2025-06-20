@@ -15,19 +15,21 @@ namespace Leetcode.Medium
         //之後比較DP[i] = Max(nums[i]+DP[i-2],DP[i-1])
         public int Rob(int[] nums)
         {
-            if (nums.Length == 1) return nums[0];
+            var dp = new int[nums.Length + 1];
 
-            var pre = 0;
-            var post = 0;
-
-            for (var i = 2; i < nums.Length; i++)
+            for (var i = 1; i <= nums.Length; i++)
             {
-                var tmp = post;
-                post = Math.Max(post, pre + nums[i]);
-                pre = tmp;
+                if (i == 1)
+                {
+                    dp[i] = nums[i - 1];
+                }
+                else
+                {
+                    dp[i] = Math.Max(nums[i - 1] + dp[i - 2], dp[i - 1]);
+                }
             }
 
-            return post;
+            return dp[^1];
         }
     }
 }
