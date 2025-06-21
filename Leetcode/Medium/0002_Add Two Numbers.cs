@@ -8,32 +8,25 @@ namespace Leetcode.Medium
 {
     public class _2_Add_Two_Numbers
     {
+        //runtime 100%
+        //time complexity O(max(m, n))
+        //space complexity O(max(l1,l2))
         public static ListNode AddTwoNumbers(ListNode l1, ListNode l2, int carry = 0)
         {
             if (l1 == null && l2 == null && carry == 0)
                 return null;
 
-            var Carry = 0;
-            var f = l1 != null ? l1.val : 0;
-            var s = l2 != null ? l2.val : 0;
-            var num = f + s + carry;
-            if (num > 9)
-            {
-                Carry = 1;
-                num = num % 10;
-            }
-            return new ListNode() { val = num, next = AddTwoNumbers(l1?.next, l2?.next, Carry) };
-        }
-    }
+            var tmp = carry;
 
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
+            if (l1 != null)
+                tmp += l1.val;
+            if (l2 != null)
+                tmp += l2.val;
+
+            carry = tmp / 10;
+            tmp %= 10;
+
+            return new ListNode(tmp, AddTwoNumbers(l1?.next, l2?.next, carry));
         }
     }
 }

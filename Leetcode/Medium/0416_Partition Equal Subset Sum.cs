@@ -9,32 +9,29 @@ namespace Leetcode.Medium
 {
     public class _0416_Partition_Equal_Subset_Sum
     {
-        //runtime 84%
-        //DP經典題
-        //Time complexity O(n*target)
-        //Space complexity O(target)
+        //runtime 90%
+        //time complexity O(n*m)
+        //space complexity O(m)
         public bool CanPartition(int[] nums)
         {
             var sum = nums.Sum();
-            var target = sum / 2;
 
-            if ((sum & 1) != 0)
+            if (sum % 2 == 1)
                 return false;
 
-            var length = nums.Length;
+            var target = sum / 2;
             var dp = new bool[target + 1];
-            //空集合必定可以
             dp[0] = true;
 
             foreach (var num in nums)
             {
-                for (int i = target; i >= num; i--)
+                for (int j = target; j >= num; j--)
                 {
-                    dp[i] = dp[i - num] || dp[i];
+                    dp[j] |= dp[j - num];
                 }
             }
 
-            return dp[target];
+            return dp[^1];
         }
     }
 }

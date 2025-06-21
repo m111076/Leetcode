@@ -18,18 +18,23 @@ namespace Leetcode.Medium
             }
 
             var result = int.MaxValue;
-            var fregs = dic.Values.ToArray();
-            Array.Sort(fregs);
+            var freqs = dic.Values.ToArray();
+            Array.Sort(freqs);
+            var currentF = 0;
 
-            foreach (var freg in fregs)
+            foreach (var freq in freqs)
             {
+                if(currentF!=freq)
+                    currentF = freq;
+                else
+                    continue;
                 var deleteCnt = 0;
-                foreach (var f in fregs)
+                foreach (var f in freqs)
                 {
-                    if (f < freg)
+                    if (f < freq)
                         deleteCnt += f;
-                    else if (f > freg + k)
-                        deleteCnt += f - freg - k;
+                    else if (f > freq + k)
+                        deleteCnt += f - freq - k;
                 }
                 result = Math.Min(result, deleteCnt);
             }
