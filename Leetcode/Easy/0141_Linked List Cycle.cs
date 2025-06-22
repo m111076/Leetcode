@@ -10,30 +10,40 @@ namespace Leetcode.Easy
     {
         public bool HasCycle(ListNode head)
         {
-            //Hash超快
-            var passNode = new HashSet<ListNode>();
-            var targetNode = head;
+            //runtime 78%
+            //time complexity O(n)
+            //space complexity O(1)
+            if (head == null || head.next == null)
+                return false;
 
-            while (targetNode != null)
+            var slow = head;
+            var fast = head;
+
+            while (fast != null && fast.next != null)
             {
-                if (passNode.Contains(targetNode))
+                slow = slow.next;
+                fast = fast.next.next;
+
+                if (slow == fast)
                     return true;
-                passNode.Add(targetNode);
-                targetNode = targetNode.next;
             }
+
             return false;
 
-            //Runtime 8% Memory 5%  = = 
-            //var passNodeDic = new Dictionary<ListNode, int>();
-            //var targetNode = head;
 
-            //while (targetNode != null)
+            //runtime 52%
+            //time complexity O(n)
+            //space complexity O(n)
+            //var set = new HashSet<ListNode>();
+            //while (head != null)
             //{
-            //    if (passNodeDic.ContainsKey(targetNode))
+            //    if (set.Contains(head))
             //        return true;
-            //    passNodeDic.Add(targetNode, 1);
-            //    targetNode = targetNode.next;
+
+            //    set.Add(head);
+            //    head = head.next;
             //}
+
             //return false;
         }
     }

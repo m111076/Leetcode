@@ -10,91 +10,42 @@ namespace Leetcode.Easy
     {
         public ListNode GetIntersectionNode(ListNode headA, ListNode headB)
         {
-            // runtime 53% memory 99%
+            //runtime 84%
+            //time complexity O(n)
+            //space complexity O(1)
+            //var tmpA = headA;
+            //var tmpB = headB;
+
+            //while (tmpA != tmpB)
+            //{
+            //    tmpA = tmpA == null ? headB : tmpA.next;
+            //    tmpB = tmpB == null ? headA : tmpB.next;
+            //}
+
+            //return tmpA;
+
+            //runtime 37%
+            //time complexity O(a+b)
+            //space complexity O(a)
             var set = new HashSet<ListNode>();
-            var targetA = headA;
-            var targetB = headB;
+            var tmp = headA;
 
-            while (targetA != null || targetB != null)
+            while (tmp != null)
             {
-                if (targetA != null)
-                {
-                    if (set.Contains(targetA))
-                    {
-                        return targetA;
-                    }
-                    set.Add(targetA);
-                    targetA = targetA.next;
-                }
-                if (targetB != null)
-                {
-                    if (set.Contains(targetB))
-                    {
-                        return targetB;
-                    }
-                    set.Add(targetB);
-                    targetB = targetB.next;
-                }
+                set.Add(tmp);
+                tmp = tmp.next;
             }
+
+            tmp = headB;
+
+            while (tmp != null)
+            {
+                if (set.Contains(tmp))
+                    return tmp;
+                tmp = tmp.next;
+            }
+
             return null;
-
-            //範例
-            //Stack<ListNode> s1 = new Stack<ListNode>();
-            //Stack<ListNode> s2 = new Stack<ListNode>();
-
-            //while (headA != null)
-            //{
-            //    s1.Push(headA);
-            //    headA = headA.next;
-            //}
-
-            //while (headB != null)
-            //{
-            //    s2.Push(headB);
-            //    headB = headB.next;
-            //}
-
-            //ListNode ans = null;
-            //while ((s1.Count > 0 && s2.Count > 0) && (s1.Peek() == s2.Peek()))
-            //{
-            //    ans = s1.Pop();
-            //    s2.Pop();
-            //}
-
-            //return ans;
-
-
-            // runtime 50% memory 6%
-            //var setA = new HashSet<ListNode>();
-            //var setB = new HashSet<ListNode>();
-
-            //var targetA = headA;
-            //var targetB = headB;
-
-            //while (targetA != null || targetB != null)
-            //{
-            //    if (targetA != null)
-            //    {
-            //        if (setB.Contains(targetA))
-            //        {
-            //            return targetA;
-            //        }
-            //        setA.Add(targetA);
-            //        targetA = targetA.next;
-            //    }
-            //    if (targetB != null)
-            //    {
-            //        if (setA.Contains(targetB))
-            //        {
-            //            return targetB;
-            //        }
-            //        setB.Add(targetB);
-            //        targetB = targetB.next;
-            //    }
-            //}
-
-            //return null;
-
         }
     }
 }

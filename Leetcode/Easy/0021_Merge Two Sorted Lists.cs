@@ -10,35 +10,32 @@ namespace Leetcode.Easy
     {
         public static ListNode MergeTwoLists(ListNode list1, ListNode list2)
         {
-            if (list1 == null && list2 == null)
-                return null;
+            //runtime 100%
+            //time complexity O(n)
+            //space complexity O(1)
+            var result = new ListNode();
+            var tmp = result;
 
-            var temp1 = list1 == null ? 51 : list1.val;
-            var temp2 = list2 == null ? 51 : list2.val;
-
-            var temp = 0;
-            if (temp1 > temp2)
+            while (list1 != null && list2 != null)
             {
-                temp = list2.val;
-                return new ListNode() { val = temp, next = MergeTwoLists(list1, list2?.next) };
-            }
-            else
-            {
-                temp = list1.val;
-                return new ListNode() { val = temp, next = MergeTwoLists(list1?.next, list2) };
+                if (list1.val < list2.val)
+                {
+                    tmp.next = list1;
+                    list1 = list1.next;
+                }
+                else
+                {
+                    tmp.next = list2;
+                    list2 = list2.next;
+                }
+
+                tmp = tmp.next;
             }
 
+            tmp.next = list1 ?? list2;
+
+            return result.next;
         }
 
-    }
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int val = 0, ListNode next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
