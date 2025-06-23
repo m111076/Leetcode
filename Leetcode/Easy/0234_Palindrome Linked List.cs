@@ -8,81 +8,41 @@ namespace Leetcode.Easy
 {
     public class _0234_Palindrome_Linked_List
     {
-        //public string SlowString = string.Empty;
-        //public string FastString = string.Empty;
-        //runtime97%
-        //直接找中點，然後後半反向
         public bool IsPalindrome(ListNode head)
         {
-            if (head == null) return false;
-            if (head.next == null) return true;
+            //runtime 97%
+            //time complexity O(n)
+            //space complexity O(1)
+            if (head.next == null)
+                return true;
 
-            var faster = head;
             var slow = head;
+            var fast = head;
+            ListNode pre = null;
 
-            while (faster != null && faster.next != null)
+            while (fast != null && fast.next != null)
+            {
+                fast = fast.next.next;
+                var tmp = slow.next;
+                slow.next = pre;
+                pre = slow;
+                slow = tmp;
+            }
+
+            if (fast != null)
             {
                 slow = slow.next;
-                faster = faster.next.next;
             }
 
-            var current = slow;
-            ListNode previous = null;
-
-            while (current != null)
+            while (pre != null && slow != null)
             {
-                var temp = current.next;
-                current.next = previous;
-                previous = current;
-                current = temp;
-            }
-
-            while (previous != null)
-            {
-                if (previous.val != head.val)
+                if (pre.val != slow.val)
                     return false;
-                previous = previous.next;
-                head = head.next;
+                pre = pre.next;
+                slow = slow.next;
             }
+
             return true;
         }
-
-
-        //TIme  Exceed
-        //public bool IsPalindrome(ListNode head)
-        //{
-        //    if (head == null) return false;
-        //    if (head.next == null) return true;
-
-        //    readValue(head, head);
-        //    if (FastString.Length % 2 == 0)
-        //    {
-        //        FastString = FastString.Substring(SlowString.Length, FastString.Length - SlowString.Length);
-        //        return SlowString.SequenceEqual(FastString.Reverse());
-        //    }
-        //    else
-        //    {
-        //        FastString = FastString.Substring(SlowString.Length, FastString.Length - SlowString.Length);
-        //        SlowString = SlowString.Substring(0, SlowString.Length - 1);
-        //        return SlowString.SequenceEqual(FastString.Reverse());
-        //    }
-        //}
-
-        //private void readValue(ListNode iHeadSlow, ListNode iHeadFast)
-        //{
-        //    if (iHeadFast == null) return;
-
-        //    SlowString += $"{iHeadSlow.val}";
-        //    FastString += $"{iHeadFast.val}";
-        //    if (iHeadFast.next != null)
-        //    {
-        //        FastString += $"{iHeadFast.next.val}";
-        //        readValue(iHeadSlow.next, iHeadFast.next.next);
-        //    }
-        //    else
-        //    {
-        //        return;
-        //    }
-        //}
     }
 }

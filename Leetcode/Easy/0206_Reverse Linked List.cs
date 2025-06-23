@@ -11,19 +11,21 @@ namespace Leetcode.Easy
         public ListNode ReverseList(ListNode head)
         {
             //runtime 100%
-            ListNode previousHead = null;
-            ListNode currentHead = head;
-            ListNode tempHead = null;
+            //time complexity O(n)
+            //space complexity O(1)
+            //順序問題，紀錄好每個node接下來的位置
+            ListNode pre = null;
+            ListNode cur = head;
 
-            while (currentHead != null)
+            while (cur != null)
             {
-                tempHead = currentHead.next;
-                currentHead.next = previousHead;
-                previousHead = currentHead;
-                currentHead = tempHead;
+                var tmp = cur.next;
+                cur.next = pre;
+                pre = cur;
+                cur = tmp;
             }
 
-            return previousHead;
+            return pre;
         }
     }
 }
