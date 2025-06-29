@@ -126,5 +126,6 @@ internal class Program
         //_0440_K_th_Smallest_in_Lexicographical_Order.FindKthNumber(10000, 50);
         //_0131_Palindrome_Partitioning.Partition("aab");
         //_0049_Group_Anagrams.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+        _0594_Longest_Harmonious_Subsequence.FindLHS(new int[] { 1, 3, 2, 2, 5, 2, 3, 7 });
     }
 }
