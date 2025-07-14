@@ -8,6 +8,10 @@ namespace Leetcode.Hard
 {
     internal class _3614_Process_String_with_Special_Operations_II
     {
+        //runtime 100%
+        //time complexity O(n)
+        //space complexity O(1)
+        //先順向計算出總長度，接著逆向回推
         public char ProcessStr(string s, long k)
         {
             var length = 0L;
@@ -37,7 +41,7 @@ namespace Leetcode.Hard
                 else if (c == '#')
                 {
                     length /= 2;
-                    if (k >= length)
+                    if (k >= length)//這邊主要是計算出目標k是由誰複製而來的，等於時並不是解答
                         k -= length;
                 }
                 else if (c == '%')
