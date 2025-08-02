@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Leetcode.MySOL
 {
-    internal class _1068_Product_Sales_Analysis_I
+    internal class _1581_Customer_Who_Visited_but_Did_Not_Make_Any_Transactions
     {
         public void MySQL()
         {
-            //select p.product_name,s.year,s.price from Product as p inner join Sales as s using (product_id);
+            //
         }
     }
 }
