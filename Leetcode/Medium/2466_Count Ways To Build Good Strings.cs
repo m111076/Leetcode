@@ -8,9 +8,9 @@ namespace Leetcode.Medium
 {
     internal class _2466_Count_Ways_To_Build_Good_Strings
     {
-        public int CountGoodStrings(int low, int high, int zero, int one)
-        {
+        //public int CountGoodStrings(int low, int high, int zero, int one)
+        //{
 
-        }
+        //}
     }
 }
