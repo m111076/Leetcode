@@ -14,6 +14,11 @@ namespace Leetcode.Easy
         //space complexity O(1)
         public bool HasAlternatingBits(int n)
         {
+            //更快
+            var x = n ^ (n >> 1);
+
+            return (x & (x + 1)) == 0;
+
             var highIdx = BitOperations.Log2((uint)n);
             var preBit = 0;
 
